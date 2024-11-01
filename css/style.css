@@ -1,0 +1,421 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+#header {
+  width: 300px;
+  height: 100%;
+  background-color: black;
+  color: bisque;
+  position: fixed;
+  top: 0;
+  padding: 40px 40px;
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+}
+#header nav {
+  font-size: small;
+}
+#header nav ul li {
+  margin-top: 15px;
+}
+#header nav ul li:nth-of-type(1) {
+  margin-top: 30px;
+}
+#header nav .sns {
+  margin-top: 80px;
+}
+
+.container {
+  margin-left: 300px;
+}
+
+#bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+#bg img {
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  max-width: 900px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.title-white {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: x-large;
+  margin-bottom: 60px;
+  color: white;
+}
+.title-white::before {
+  border-top: 1px solid;
+  content: "";
+  width: 30%;
+}
+.title-white::after {
+  border-top: 1px solid;
+  content: "";
+  width: 30%;
+}
+
+#sakanaction .music-image {
+  width: 100%;
+  padding: 30px;
+}
+#sakanaction .music-image #slider {
+  max-width: 330px;
+  margin: 0 auto;
+  position: relative;
+}
+#sakanaction .music-image .slick-arrow {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  font-size: 0;
+  cursor: pointer;
+}
+#sakanaction .music-image .slick-arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+}
+#sakanaction .music-image .slick-prev {
+  left: -40px;
+}
+#sakanaction .music-image .slick-prev::before {
+  transform: translate(-25%, -50%) rotate(-135deg);
+}
+#sakanaction .music-image .slick-next {
+  right: -40px;
+}
+#sakanaction .music-image .slick-next::before {
+  transform: translate(-75%, -50%) rotate(45deg);
+}
+#sakanaction .Sakana-title {
+  margin: 0 auto;
+  text-align: center;
+  font-size: x-large;
+  margin-bottom: 60px;
+  color: white;
+}
+
+#feature {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  padding: 100vh 0 300px;
+}
+#feature .wrapper ul {
+  display: flex;
+  justify-content: space-between;
+}
+#feature .wrapper ul li {
+  color: white;
+  text-align: center;
+  width: 30%;
+}
+#feature .wrapper ul li .circle {
+  font-size: small;
+  width: 100%;
+  padding: calc(50% - 2px) 0;
+  border: solid 1px white;
+  border-radius: 50%;
+  line-height: 1px;
+  position: relative;
+  overflow: hidden;
+}
+#feature .wrapper ul li .circle::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+#feature .wrapper ul li .circle:hover::before {
+  opacity: 0.5;
+}
+#feature .wrapper ul li .circle:hover {
+  color: grey;
+}
+#feature .wrapper ul li h3 {
+  margin-top: 10px;
+}
+#feature .wrapper ul li .text {
+  margin-top: 10px;
+  font-size: small;
+}
+
+footer {
+  background-color: #000000;
+  margin-left: 300px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 30px 0;
+  font-size: small;
+}
+.menu li::after {
+  content: "";
+  border-right: solid 1px;
+  margin: 0 20px;
+}
+.menu li:nth-of-type(3)::after {
+  content: none;
+  border-right: none;
+}
+
+.content {
+  max-width: 1360px;
+  padding: 80px 40px;
+  margin-left: 300px;
+}
+.content .title {
+  font-size: 0.9rem;
+  margin: 40px 0 25px;
+}
+.content .about-text {
+  margin: 10px 0;
+}
+.content .about-text P {
+  font-size: 0.9rem;
+  margin: 10px 0 30px;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+.hobby {
+  display: flex;
+}
+.hobby .hobby-img {
+  width: 50%;
+  background-color: #000210;
+  height: 23vh;
+}
+.hobby .hobby-text {
+  padding: 20px;
+  width: 50%;
+  height: 23vh;
+  font-size: 0.8rem;
+  line-height: 25px;
+  font-weight: bold;
+  color: aquamarine;
+}
+.hobby .hobby-text h3 {
+  color: rgb(167, 222, 57);
+  margin-bottom: 10px;
+}
+
+.biography {
+  width: 600px;
+  font-size: 0.85rem;
+  height: 70vh;
+}
+.biography dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+}
+.biography dl dt {
+  width: 30%;
+  border-bottom: solid 1px #dcdbdb;
+  padding: 20px 0;
+}
+.biography dl dd {
+  width: 70%;
+  border-bottom: solid 1px #dcdbdb;
+  padding: 20px 0;
+}
+
+.sakana {
+  color: beige;
+  height: 74vh;
+}
+.sakana p {
+  font-size: 0.9rem;
+  margin: 10px 0 80px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+  #header {
+    width: 100%;
+    height: 80px;
+    padding: 0;
+    z-index: 1;
+  }
+  #header h1 {
+    z-index: 4;
+    position: fixed;
+    left: 20px;
+    top: 15px;
+  }
+  #header nav {
+    width: 100vw;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: -1000px;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 4;
+  }
+  #header nav.active {
+    left: 0;
+    opacity: 1;
+  }
+  #header nav ul {
+    margin-top: 55px;
+    font-size: larger;
+  }
+  #header nav ul li {
+    margin-top: 20px;
+  }
+  #header nav ul li:nth-of-type(1) {
+    margin-top: 10px;
+  }
+  #header nav .sns {
+    margin-top: 60px;
+  }
+  #header .hamburger-btn {
+    z-index: 4;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  #header .hamburger {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #header .hamburger span {
+    display: block;
+    height: 2px;
+    width: 40px;
+    border-radius: 30px;
+    background-color: aquamarine;
+  }
+  #header .hamburger span:nth-of-type(1) {
+    transition: transform 0.4s ease;
+    margin-top: 30px;
+  }
+  #header .hamburger span:nth-of-type(2) {
+    transition: opacity 0.6s;
+    margin-top: 10px;
+  }
+  #header .hamburger span:nth-of-type(3) {
+    transition: transform 0.4s ease;
+    margin-top: 10px;
+  }
+  #header .hamburger.active {
+    padding-top: 40px;
+  }
+  #header .hamburger.active span {
+    background-color: aquamarine;
+  }
+  #header .hamburger.active span:nth-of-type(1) {
+    position: absolute;
+    margin-top: 0;
+    transform: rotate(45deg);
+  }
+  #header .hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  #header .hamburger.active span:nth-of-type(3) {
+    position: absolute;
+    margin-top: 0;
+    transform: rotate(-45deg);
+  }
+  #header .mask {
+    display: none;
+    transition: 0.5s;
+  }
+  #header .mask.active {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    cursor: pointer;
+    display: block;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .container {
+    margin-left: 0px;
+  }
+  .title-white::before {
+    width: 15%;
+  }
+  .title-white::after {
+    width: 15%;
+  }
+  .under-title {
+    font-size: small;
+  }
+  footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .hobby {
+    margin-top: 80px;
+  }
+  .hobby .hobby-img {
+    display: none;
+  }
+  .hobby .hobby-text {
+    width: 100%;
+    height: auto;
+  }
+  .content {
+    margin-left: 0;
+  }
+  .biography {
+    width: 100%;
+    height: 70vh;
+  }
+  iframe {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
